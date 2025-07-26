@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - StyleShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">StyleShop</a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icons">
+                    <a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
+                    <a href="account.html"><i class="fas fa-user"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container" id="search-container">
+                <input type="text" placeholder="Search products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/600" alt="Classic White Sneakers" id="main-product-image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://via.placeholder.com/600" alt="Classic White Sneakers - View 1" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="https://via.placeholder.com/600?text=View+2" alt="Classic White Sneakers - View 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="https://via.placeholder.com/600?text=View+3" alt="Classic White Sneakers - View 3" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <span class="product-category" id="product-category">Footwear</span>
+                    <h1 id="product-name">Classic White Sneakers</h1>
+                    <p class="product-price" id="product-price">$89.99</p>
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <h3>Size</h3>
+                            <div class="size-options">
+                                <button class="size-option">US 7</button>
+                                <button class="size-option">US 8</button>
+                                <button class="size-option">US 9</button>
+                                <button class="size-option">US 10</button>
+                                <button class="size-option">US 11</button>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <h3>Color</h3>
+                            <div class="color-options">
+                                <button class="color-option">White</button>
+                                <button class="color-option">Black</button>
+                                <button class="color-option">Navy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="quantity">
+                            <h3>Quantity</h3>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn" onclick="decrementQuantity()">-</button>
+                                <input type="number" value="1" min="1" id="quantity-input">
+                                <button class="quantity-btn" onclick="incrementQuantity()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-lg" onclick="addToCart()">Add to Cart</button>
+                        <button class="btn btn-outline btn-lg">Add to Wishlist</button>
+                    </div>
+                    
+                    <div class="product-tabs">
+                        <div class="tabs">
+                            <button class="tab-btn active" data-tab="description">Description</button>
+                            <button class="tab-btn" data-tab="features">Features</button>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="description">
+                                <p>These classic white sneakers are perfect for any casual outfit. Made with premium materials for comfort and durability.</p>
+                            </div>
+                            <div class="tab-pane" id="features">
+                                <ul>
+                                    <li>Premium leather upper</li>
+                                    <li>Cushioned insole for all-day comfort</li>
+                                    <li>Durable rubber outsole</li>
+                                    <li>Breathable lining</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <a href="product-detail.html?id=2">
+                                <img src="https://via.placeholder.com/400" alt="Slim Fit Denim Jacket">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Outerwear</span>
+                            <h3><a href="product-detail.html?id=2">Slim Fit Denim Jacket</a></h3>
+                            <p class="product-price">$129.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <a href="product-detail.html?id=3">
+                                <img src="https://via.placeholder.com/400" alt="Leather Crossbody Bag">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3><a href="product-detail.html?id=3">Leather Crossbody Bag</a></h3>
+                            <p class="product-price">$79.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <a href="product-detail.html?id=4">
+                                <img src="https://via.placeholder.com/400" alt="Oversized Sunglasses">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessories</span>
+                            <h3><a href="product-detail.html?id=4">Oversized Sunglasses</a></h3>
+                            <p class="product-price">$49.99</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <a href="product-detail.html?id=5">
+                                <img src="https://via.placeholder.com/400" alt="Cotton T-Shirt">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Clothing</span>
+                            <h3><a href="product-detail.html?id=5">Cotton T-Shirt</a></h3>
+                            <p class="product-price">$24.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StyleShop</h3>
+                    <p>Your destination for trendy fashion and accessories at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="new-arrivals.html">New Arrivals</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> StyleShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

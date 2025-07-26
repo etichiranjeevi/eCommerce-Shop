@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - StyleShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">StyleShop</a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icons">
+                    <a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
+                    <a href="account.html"><i class="fas fa-user"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container" id="search-container">
+                <input type="text" placeholder="Search products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Page -->
+    <section class="products-page">
+        <div class="container">
+            <h1>All Products</h1>
+            
+            <div class="products-container">
+                <div class="filters">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Categories</h4>
+                        <div class="filter-options">
+                            <label>
+                                <input type="checkbox" name="category" value="clothing">
+                                Clothing
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="footwear">
+                                Footwear
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="accessories">
+                                Accessories
+                            </label>
+                            <label>
+                                <input type="checkbox" name="category" value="outerwear">
+                                Outerwear
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-slider">
+                            <input type="range" min="0" max="500" value="200" class="slider" id="priceRange">
+                            <div class="price-range-values">
+                                <span>$0</span>
+                                <span id="priceValue">$200</span>
+                                <span>$500</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Sizes</h4>
+                        <div class="filter-options">
+                            <label>
+                                <input type="checkbox" name="size" value="xs">
+                                XS
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" value="s">
+                                S
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" value="m">
+                                M
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" value="l">
+                                L
+                            </label>
+                            <label>
+                                <input type="checkbox" name="size" value="xl">
+                                XL
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Colors</h4>
+                        <div class="filter-options">
+                            <label>
+                                <input type="checkbox" name="color" value="black">
+                                Black
+                            </label>
+                            <label>
+                                <input type="checkbox" name="color" value="white">
+                                White
+                            </label>
+                            <label>
+                                <input type="checkbox" name="color" value="blue">
+                                Blue
+                            </label>
+                            <label>
+                                <input type="checkbox" name="color" value="red">
+                                Red
+                            </label>
+                            <label>
+                                <input type="checkbox" name="color" value="green">
+                                Green
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-list">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=1">
+                                    <img src="https://via.placeholder.com/400" alt="Classic White Sneakers">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Footwear</span>
+                                <h3><a href="product-detail.html?id=1">Classic White Sneakers</a></h3>
+                                <p class="product-price">$89.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=2">
+                                    <img src="https://via.placeholder.com/400" alt="Slim Fit Denim Jacket">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Outerwear</span>
+                                <h3><a href="product-detail.html?id=2">Slim Fit Denim Jacket</a></h3>
+                                <p class="product-price">$129.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=3">
+                                    <img src="https://via.placeholder.com/400" alt="Leather Crossbody Bag">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Accessories</span>
+                                <h3><a href="product-detail.html?id=3">Leather Crossbody Bag</a></h3>
+                                <p class="product-price">$79.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=4">
+                                    <img src="https://via.placeholder.com/400" alt="Oversized Sunglasses">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Accessories</span>
+                                <h3><a href="product-detail.html?id=4">Oversized Sunglasses</a></h3>
+                                <p class="product-price">$49.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=5">
+                                    <img src="https://via.placeholder.com/400" alt="Cotton T-Shirt">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Clothing</span>
+                                <h3><a href="product-detail.html?id=5">Cotton T-Shirt</a></h3>
+                                <p class="product-price">$24.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=6">
+                                    <img src="https://via.placeholder.com/400" alt="High-Waisted Jeans">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Clothing</span>
+                                <h3><a href="product-detail.html?id=6">High-Waisted Jeans</a></h3>
+                                <p class="product-price">$69.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=7">
+                                    <img src="https://via.placeholder.com/400" alt="Wool Beanie">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Accessories</span>
+                                <h3><a href="product-detail.html?id=7">Wool Beanie</a></h3>
+                                <p class="product-price">$19.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-img">
+                                <a href="product-detail.html?id=8">
+                                    <img src="https://via.placeholder.com/400" alt="Leather Wallet">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">Accessories</span>
+                                <h3><a href="product-detail.html?id=8">Leather Wallet</a></h3>
+                                <p class="product-price">$39.99</p>
+                                <button class="btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StyleShop</h3>
+                    <p>Your destination for trendy fashion and accessories at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="new-arrivals.html">New Arrivals</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> StyleShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

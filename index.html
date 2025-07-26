@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleShop - Modern E-Commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+ <!-- Header -->
+<header class="header">
+    <div class="announcement-bar">
+        <div class="container">
+            <p>Free shipping on all orders over $50 | <a href="#">Learn More</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Style<span class="logo-accent">Shop</span></span>
+                </a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#" id="search-toggle" class="nav-icon-link">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="account.html" class="nav-icon-link">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="cart.html" class="nav-icon-link cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <div class="search-container" id="search-container">
+            <input type="text" placeholder="Search for products...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+<!-- Replace this section -->
+<section class="hero" style="background-image: url('images/hero4.png'); background-size: cover; background-position: center;">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Discover Your Style<br><span>Shop the Latest Trends</span></h1>
+            <p>Explore our curated collection of fashion, accessories, and lifestyle products. Quality meets style at prices you'll love.</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn">Shop Now</a>
+                <a href="categories.html" class="btn btn-outline">Browse Categories</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2>Featured Products</h2>
+                    <p>Our most popular items handpicked for you</p>
+                </div>
+                <a href="products.html" class="btn btn-outline">View All Products</a>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/footwear/f1.png" alt="Classic White Sneakers">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Footwear</span>
+                        <h3>Classic White Sneakers</h3>
+                        <p class="product-price">$89.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/jackets/j1.png" alt="Slim Fit Denim Jacket">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Outerwear</span>
+                        <h3>Slim Fit Denim Jacket</h3>
+                        <p class="product-price">$129.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/accessories/a1.png" alt="Leather Crossbody Bag">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3>Leather Crossbody Bag</h3>
+                        <p class="product-price">$79.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/accessories/a2.png" alt="Oversized Sunglasses">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Accessories</span>
+                        <h3>Oversized Sunglasses</h3>
+                        <p class="product-price">$49.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <a href="categories.html?category=clothing" class="category-card">
+                    <img src="images/blog/b3.jpg" alt="Clothing">
+                    <div class="category-info">
+                        <h3>Clothing</h3>
+                        <p>124 Products</p>
+                    </div>
+                </a>
+                <a href="categories.html?category=footwear" class="category-card">
+                    <img src="images/c2.png" alt="Footwear">
+                    <div class="category-info">
+                        <h3>Footwear</h3>
+                        <p>86 Products</p>
+                    </div>
+                </a>
+                <a href="categories.html?category=accessories" class="category-card">
+                    <img src="images/banner/b17.jpg" alt="Accessories">
+                    <div class="category-info">
+                        <h3>Accessories</h3>
+                        <p>92 Products</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <p class="section-subtitle">Don't just take our word for it</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="images/people/3.png" alt="Sarah Johnson" class="testimonial-avatar">
+                        <div>
+                            <h3>Sarah Johnson</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>I absolutely love the quality of the clothes! The fabric is soft yet durable, and the fit is perfect. Will definitely be ordering more.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="images/people/1.png" alt="Michael Chen" class="testimonial-avatar">
+                        <div>
+                            <h3>Michael Chen</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Fast shipping and excellent customer service. The product exceeded my expectations and I received many compliments on my new jacket.</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="images/people/2.png" alt="Harry Rodriguez" class="testimonial-avatar">
+                        <div>
+                            <h3>Harry Rodriguez</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Great value for the price. The styles are trendy and the sizing guide was very helpful. Would recommend to friends and family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <!-- <section class="newsletter">
+        <div class="container">
+            <h2>Join Our Newsletter</h2>
+            <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <!-- <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StyleShop</h3>
+                    <p>Your destination for trendy fashion and accessories at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="new-arrivals.html">New Arrivals</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> StyleShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer> -->
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <h3>Join Our Newsletter</h3>
+                    <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                </div>
+                <form id="footer-newsletter-form">
+                    <div class="newsletter-form-group">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-text">Style<span class="logo-accent">Shop</span></span>
+                    </div>
+                    <p>Your destination for trendy fashion and accessories at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="new-arrivals.html">New Arrivals</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-content">
+                <p>&copy; <span id="current-year"></span> StyleShop. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - StyleShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">StyleShop</a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-icons">
+                    <a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
+                    <a href="account.html"><i class="fas fa-user"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container" id="search-container">
+                <input type="text" placeholder="Search products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Page -->
+    <section class="cart-page">
+        <div class="container">
+            <h1>Your Cart</h1>
+            
+            <div id="cart-container">
+                <!-- Cart items will be displayed here -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="cart-item-img">
+                            <img src="https://via.placeholder.com/200" alt="Classic White Sneakers">
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-info">
+                                <h3><a href="product-detail.html?id=1">Classic White Sneakers</a></h3>
+                                <div class="cart-item-meta">
+                                    <p>Size: US 9</p>
+                                    <p>Color: White</p>
+                                    <p>Price: $89.99</p>
+                                </div>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" onclick="updateCartItemQuantity(1, -1)">-</button>
+                                    <input type="number" value="1" min="1" id="cart-item-1-quantity">
+                                    <button class="quantity-btn" onclick="updateCartItemQuantity(1, 1)">+</button>
+                                </div>
+                                <p class="cart-item-price">$89.99</p>
+                                <button class="remove-btn" onclick="removeCartItem(1)">
+                                    <i class="fas fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <div class="cart-item-img">
+                            <img src="https://via.placeholder.com/200" alt="Leather Crossbody Bag">
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-info">
+                                <h3><a href="product-detail.html?id=3">Leather Crossbody Bag</a></h3>
+                                <div class="cart-item-meta">
+                                    <p>Color: Brown</p>
+                                    <p>Price: $79.99</p>
+                                </div>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" onclick="updateCartItemQuantity(3, -1)">-</button>
+                                    <input type="number" value="1" min="1" id="cart-item-3-quantity">
+                                    <button class="quantity-btn" onclick="updateCartItemQuantity(3, 1)">+</button>
+                                </div>
+                                <p class="cart-item-price">$79.99</p>
+                                <button class="remove-btn" onclick="removeCartItem(3)">
+                                    <i class="fas fa-trash"></i>
+                                    Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$169.98</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$5.99</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$175.97</span>
+                    </div>
+                    
+                    <button class="btn btn-lg">Proceed to Checkout</button>
+                    
+                    <div class="promo-code">
+                        <h3>Have a promo code?</h3>
+                        <div class="promo-input">
+                            <input type="text" placeholder="Enter code">
+                            <button class="btn btn-outline">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Empty cart state (hidden by default) -->
+            <div id="empty-cart" class="empty-cart" style="display: none;">
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added anything to your cart yet.</p>
+                <a href="products.html" class="btn">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>StyleShop</h3>
+                    <p>Your destination for trendy fashion and accessories at affordable prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="new-arrivals.html">New Arrivals</a></li>
+                        <li><a href="sale.html">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping & Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> StyleShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
