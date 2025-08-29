@@ -1,0 +1,21 @@
+pipeline {
+  agent any
+  stages {
+    stage('Clone') {
+      steps {
+        git branch: 'main', url: 'https://github.com/etichiranjeevi/eCommerce-Shop.git'
+      }
+    }
+    stage('Install') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        sh 'scp -o StrictHostKeyChecking=no -r * ubuntu@3.88.212.66:/home/deploy/style-shop/'
+        sh ''' ssh ubuntu@3.88.212.66 "cd /home/deploy/style-shop && npm install && pm2 stop style-shop || true && pm2 start server.js --name style-shop'''
+      }
+    }
+  }
+}
