@@ -14,7 +14,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'scp -o StrictHostKeyChecking=no -r * ubuntu@54.226.51.71:/home/ubuntu/e-commerce/'
-        sh ''' ssh ubuntu@54.226.51.71 "cd /home/ubuntu/e-commerce && npm install && pm2 stop e-commerce || true && pm2 start server.js --name e-commerce && pm2 save && pm2 startup systemd -u ubuntu --hp /home/ubuntu "'''
+        sh ''' ssh ubuntu@54.226.51.71 "cd /home/ubuntu/e-commerce && npm install && pm2 stop e-commerce || true && pm2 start server.js --name e-commerce && pm2 save && sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u ubuntu --hp /home/ubuntu "'''
       }
     }
   }
