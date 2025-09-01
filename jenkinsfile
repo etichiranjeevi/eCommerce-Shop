@@ -13,8 +13,8 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'scp -o StrictHostKeyChecking=no -r * ubuntu@3.88.212.66:/home/deploy/style-shop/'
-        sh ''' ssh ubuntu@3.88.212.66 "cd /home/deploy/style-shop && npm install && pm2 stop style-shop || true && pm2 start server.js --name style-shop"'''
+        sh 'scp -o StrictHostKeyChecking=no -r * ubuntu@3.88.212.66:/home/ubuntu/e-commerce/'
+        sh ''' ssh ubuntu@34.229.91.138 "cd /home/ubuntu/e-commerce && npm install && pm2 stop style-shop || true && pm2 start server.js --name e-commerce"'''
       }
     }
   }
